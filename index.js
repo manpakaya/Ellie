@@ -28,7 +28,7 @@ const {
   const qrcode = require('qrcode-terminal')
   const StickersTypes = require('wa-sticker-formatter')
   const util = require('util')
-  const { sms, downloadMediaMessage } = require('./ellie/lib')
+  const { sms, downloadMediaMessage } = require('./ellie/lib/msg')
   const FileType = require('file-type');
   const axios = require('axios')
   const { File } = require('megajs')
