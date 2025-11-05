@@ -62,7 +62,7 @@ const {
   
   //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/ellie/session/creds.json')) {
-if(!config.SESSION_ID) {
+if(!config.SESSION_ID) return console.log('Add')
 const sessdata = config.SESSION_ID
 const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
@@ -71,7 +71,6 @@ fs.writeFile(__dirname + '/ellie/session/creds.json', data, () => {
 console.log("Session downloaded ✅")
    })
   })
- }
 }
 
 const express = require("express");
